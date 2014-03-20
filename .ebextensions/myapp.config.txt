@@ -1,0 +1,5 @@
+commands:
+  test: 
+    command: /opt/aws/bin/ec2-create-tags $(/opt/aws/bin/ec2-metadata -i | cut -d ' ' -f2) --tag TestTag=TestValue
+    env:
+       EC2_HOME: /opt/aws/apitools/ec2
